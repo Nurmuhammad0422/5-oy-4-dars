@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./images/site-icon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: "#4CAF50",
+            danger: "#F44336",
+            accent: "#FFC107",
+          },
+        },
+      },
+    };
+  </script>
+  <title>Todo App</title>
+</head>
+<body class="bg-gray-100 font-sans">
+  <header class="bg-primary text-white text-center py-4 shadow-md">
+    <h1 class="text-3xl font-bold">My Todo List</h1>
+  </header>
+
+  <main class="p-5">
+    <form class="todo-form bg-white shadow-lg w-full max-w-md mx-auto mt-10 p-5 rounded-md flex items-center gap-3">
+      <input
+        class="todo-input p-2 rounded-md border-[2px] border-gray-300 flex-grow focus:ring-2 focus:ring-primary outline-none"
+        type="text"
+        placeholder="Add something..."
+      />
+      <button
+        type="submit"
+        class="bg-primary text-white px-4 py-2 font-semibold rounded-md hover:bg-green-600 transition-all"
+      >
+        Add
+      </button>
+    </form>
+
+    <ul class="todo-list bg-white shadow-lg w-full max-w-md mx-auto mt-10 p-5 space-y-4 rounded-md"></ul>
+  </main>
+
+  <footer class="text-center py-4 bg-gray-200 text-gray-700 mt-10">
+    <p>&copy; 2024 My Todo App</p>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>
